@@ -15,5 +15,5 @@ Click to view.
 
 ### Mutt
 
-[![mutt dark](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/homePage.png)](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/homePage.png)
+[![mutt dark]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/homePage.png)
 
