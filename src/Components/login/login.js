@@ -25,7 +25,7 @@ export default class Login extends Component {
 render() {
 return (
 <Container>
-<Header style={{backgroundColor:'#ff6d59'}}>
+<Header style={{backgroundColor:'#F72F81'}}>
 <Left>
 <Button transparent onPress={() => this.props.navigation.navigate('Home')}>
 	<Icon name='arrow-back' />

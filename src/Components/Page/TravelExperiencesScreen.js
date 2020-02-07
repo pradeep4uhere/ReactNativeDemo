@@ -20,7 +20,7 @@ export default class TravelExperiencesScreen extends Component {
   render() {  
       return (  
         <Container>
-        <Header style={{backgroundColor:'#ff6d59'}}>
+        <Header style={{backgroundColor:'#F72F81'}}>
           <Left>
           <Icon style={{color:'#FFF'}} name="home" onPress={() => this.props.navigation.openDrawer()}  />       
           </Left>

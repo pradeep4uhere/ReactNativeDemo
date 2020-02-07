@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import { View,StyleSheet,Image, ImageBackground,SafeAreaView, ScrollView,TouchableHighlight } from 'react-native';
 import { Container, Header, Content, Button, Text, Left, Body, Right, Icon, Title, Form, Item, Input, Label } from 'native-base';
-import HomeSlider from '../home/HomeSlider';
+import HomeSlider from '../home/TopSlider';
 import PopularEvent from '../home/PopularEvent';
 import PopularViedos from '../home/PopularViedos';
 import PopularDestination from '../home/PopularDestination';
@@ -108,7 +108,7 @@ render() {
       });
 return (
 <Container>
-<Header style={{backgroundColor:'#ff6d59'}}>
+<Header style={{backgroundColor:'#F72F81'}}>
 <View style={{width:40,justifyContent:'center'}}>
   <Image source={require('../../assets/img/logo.png')} style={{height:35, width:35}}/>
     

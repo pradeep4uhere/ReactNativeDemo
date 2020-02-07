@@ -11,7 +11,7 @@ import { createSwitchNavigator,   createAppContainer  } from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack'; 
 const CustomeDrawerContentComponent = (props) =>(
   <Container>
-    <Header style={{height:150,backgroundColor:'#FFF'}} >
+    <Header style={{height:150,backgroundColor:'#F72F81'}} >
       <Body style={styles.drawerContainer}>
         <Image source={require('../../assets/img/android-profile-icon-65.png')} style={{width:100,height:100}}/>
         <View><Text style={styles.drawerContainerwelcometext}>Welcome, Pradeep</Text></View>
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   drawerContainerwelcometext:{
   	margin: 10,
     fontSize: 18,
-    color:'#222'
+    color:'#FFF'
   },
   container: {
     flex: 1,

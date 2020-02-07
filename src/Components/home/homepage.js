@@ -101,7 +101,7 @@ render() {
       });
 return (
 <Container>
-<Header style={{backgroundColor:'#ff6d59'}}>
+<Header style={{backgroundColor:'#F72F81'}}>
 <View style={{width:40,justifyContent:'center'}}>
   <Image source={require('../../assets/img/logo.png')} style={{height:35, width:35}}/>
 </View>
