@@ -20,7 +20,7 @@ Click to view.
 [![DynamicPage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/3.png)
 [![ForgotPasswordPage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/forgotpassword.png)
 [![RegistrationPage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/register.png)
-[![ProfileMenu](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/profileMenu.png)](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/profileMenu.png  | width=100)
+[![ProfileMenu](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/profileMenu.png  | width=100)](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/profileMenu.png)
 
 
 
