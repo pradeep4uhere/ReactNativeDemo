@@ -15,7 +15,7 @@ Click to view.
 
 ### Mutt
 
-[![HomePage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/homePage.png)
+[![HomePage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/homePage.png =250x250)
 [![LoginPage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/login.png)
 [![DynamicPage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/3.png)
 [![ForgotPasswordPage]](https://github.com/pradeep4uhere/ReactNativeDemo/blob/master/screenshots/forgotpassword.png)
