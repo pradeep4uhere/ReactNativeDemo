@@ -10,7 +10,6 @@ import {
   ImageBackground
 } from 'react-native';
 import { Container, Header, Content, Button, Text, Left, Body, Right, Title,Icon, Form, Item,   Label } from 'native-base';
-import { CheckBox, Input } from 'react-native-elements';
 export default class settingScreen extends Component {  
   static navigationOptions = {  
        title:'Setting',

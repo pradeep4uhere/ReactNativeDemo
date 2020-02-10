@@ -28,6 +28,17 @@ export default class Footer extends Component {
       }
 render() {
     const styles = StyleSheet.create({
+        messageBox:{
+          justifyContent:"center",
+          alignItems:'center',
+          backgroundColor:'#FFF',
+          borderTopColor:'#ccc',
+          borderTopWidth:0.5,
+          
+        },  
+        messageBoxBodyText:{
+          fontSize:11,
+        },
         container: {
             flex: 1,
             marginTop: 1,
@@ -39,33 +50,10 @@ render() {
           text: {
             fontSize: 20,
           },
-
-        welcometext:{
-            width: '90%',
-            flexDirection: 'row',
-            justifyContent: "center", 
-            alignItems: "center",
-            fontSize:18,
-            color:'#FFF',
-            fontWeight: 'bold',
-            marginTop:110
-
-        },
-        text:{
-          fontSize:18,
-          color:'#FFF',
-          fontFamily: 'Cochin',
-          alignItems: "center",
-          justifyContent: "center", 
-
-        },
       });
 return (
         <View style={styles.messageBox}>
-            <Text>----------------------------------------------------------------------------------------</Text>
-        <View>
-            <Text style={styles.messageBoxBodyText}>© Copyright 2019 Rudra Experiences All rights reserved, Powered by Aimbeyond Infotech Pvt. Ltd.</Text>
-        </View>
+            <Text style={styles.messageBoxBodyText}>© Copyright 2019 All rights reserved</Text>
         </View>
 );
 }

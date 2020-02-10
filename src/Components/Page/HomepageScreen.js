@@ -94,7 +94,7 @@ render() {
           
         },
        textTitle: {
-        color:'#000',
+        color:'#FFF',
         textAlign: 'center', // <-- the magic
         fontSize:18,
        },
@@ -128,16 +128,24 @@ return (
         <View  style={{width: '100%'}}>
           <HomeSlider />
         </View>
-        <View  style={{width: '100%',marginTop:15,height:280,marginBottom:25,}}>
+        <View  style={{marginTop:15,marginBottom:25,}}>
+        <View style={{flexDirection: 'row',justifyContent: 'space-between', marginBottom:1, borderBottomWidth:0.5,marginTop:10, backgroundColor:'#ff6655'}}>
+          <View style={{margin:10}}>
+            <Text style={styles.textTitle}>Popular Events</Text>
+          </View>
+          <View style={{margin:10}}>
+            <Text style={styles.textTitle} onPress={() => this.props.navigation.navigate('Day Experiences')}>View All</Text>
+        </View>    
+        </View>
           <PopularEvent/>
         </View>
-        <View  style={{width: '100%',marginTop:15,height:280,marginBottom:25,}}>
+        <View  style={{marginBottom:25,}}>
           <PopularDestination/>
         </View>
-        <View  style={{width: '100%',marginTop:15,height:280,marginBottom:25,}}>
+        <View style={{marginBottom:20}}>
           <PopularTravel/>
         </View>
-        <View  style={{width: '100%',marginTop:15,height:280,marginBottom:25,}}>
+        <View  style={{marginBottom:25}}>
           <PopularViedos/>
         </View>
         <Footer/>

@@ -12,8 +12,7 @@ import TermsAndConditionsScreen from '../Page/TermsAndConditionsScreen';
 import PrivacyPolicyScreen  from '../Page/PrivacyPolicyScreen';
 import {    createDrawerNavigator, DrawerItems} from 'react-navigation-drawer'; 
 import { createSwitchNavigator,   createAppContainer  } from 'react-navigation'; 
-import {createStackNavigator} from 'react-navigation-stack'; 
-import { ContentContainer } from '../SideBar/ContentComponent';
+import EventDetailsPage from '../Page/EventDetailsScreen';
 const CustomeDrawerContentComponent = (props) =>(
   <Container>
     <Header style={{height:50,backgroundColor:'#FFF'}} >
@@ -43,10 +42,14 @@ const CustomeDrawerContentComponent = (props) =>(
     </Container>
 )
 
-
+class Hidden extends React.Component {
+  render() {
+    return null;
+  }
+}
 const AppDrawerNavigator = createDrawerNavigator(
  {  
-     Home                  : {  screen: HomepageScreen     },
+     Home                 : {  screen: HomepageScreen     },
     'Day Experiences'     : {  screen: DayExperinceScreen },
     'Destination'         : {  screen: DestinationScreen  },
     'Travel Experiences'  : {  screen: TravelExperiencesScreen     },
@@ -55,6 +58,11 @@ const AppDrawerNavigator = createDrawerNavigator(
     'Contact Us'          : {  screen: ContactUsScreen     },
     'Terms & Conditions'  : {  screen: TermsAndConditionsScreen     },
     'Privacy Policy'      : {  screen: PrivacyPolicyScreen     },
+    'EventDetailsPage'    : {  screen: EventDetailsPage,
+        navigationOptions: {
+            drawerLabel: <Hidden/>,
+        },   
+    },
   },
   {
     drawerType:'slide',

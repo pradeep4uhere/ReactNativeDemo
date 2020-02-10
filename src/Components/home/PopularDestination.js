@@ -41,17 +41,6 @@ export default class PopularDestination extends Component {
                   fontSize: 20,
                 },
       
-              welcometext:{
-                  width: '90%',
-                  flexDirection: 'row',
-                  justifyContent: "center", 
-                  alignItems: "center",
-                  fontSize:18,
-                  color:'#FFF',
-                  fontWeight: 'bold',
-                  marginTop:110
-      
-              },
               text:{
                 fontSize:18,
                 color:'#FFF',
@@ -67,10 +56,8 @@ export default class PopularDestination extends Component {
               },
               bottomText:{
                 margin:10,
-                fontSize:16,
+                fontSize:14,
                 color:'#FFF',
-                alignItems:'center',
-                alignContent:'center'
               },
               destinationItem:{
                 backgroundColor:'#ccc', 
@@ -79,7 +66,13 @@ export default class PopularDestination extends Component {
                 marginRight:1
               },
               destinationItemImage:{
-                height:200, width:250
+                height:185, width:205
+              },
+              destinationItemButton:{
+                backgroundColor:'#0086b3',
+                height:50, 
+                justifyContent:'center', 
+                alignContent:'center'
               }
             });
       return (
@@ -89,7 +82,7 @@ export default class PopularDestination extends Component {
               <Text style={styles.textTitle}>Popular Destination</Text>
             </View>
             <View style={{margin:10}}>
-              <Text style={styles.textTitle}>View All</Text>
+              <Text style={styles.textTitle} onPress={() => this.props.navigation.navigate('PopularDestination')}>View All</Text>
           </View>    
           </View>
           <ScrollView horizontal style={{marginBottom:1, marginTop:0}}>
@@ -99,7 +92,7 @@ export default class PopularDestination extends Component {
                 style={styles.destinationItemImage}
                 source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2019/02/Ghungroo_Delhi_Rudra_01.jpg'}}/>
                 </View>
-              <View style={{backgroundColor:'#F72F81',height:50, justifyContent:'center', alignContent:'center'}}>
+              <View style={styles.destinationItemButton}>
                 <Text style={styles.bottomText}>Keylong</Text>
               </View>
           </View> 
@@ -109,7 +102,7 @@ export default class PopularDestination extends Component {
                 style={styles.destinationItemImage}
                 source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2016/03/DSC_0480.jpg'}}/>
                 </View>
-              <View style={{backgroundColor:'#F72F81',height:50}}>
+                <View style={styles.destinationItemButton}>
               <Text style={styles.bottomText}>Pahalgam</Text>
               </View>
           </View> 
@@ -119,7 +112,7 @@ export default class PopularDestination extends Component {
                 style={styles.destinationItemImage}
                 source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2016/04/Tsomoriri_RUDRA_DSC_0903.jpg'}}/>
                 </View>
-              <View style={{backgroundColor:'#F72F81',height:50}}>
+                <View style={styles.destinationItemButton}>
               <Text style={styles.bottomText}>Tso Moriri</Text>
               </View>
           </View> 
@@ -129,15 +122,11 @@ export default class PopularDestination extends Component {
                 style={styles.destinationItemImage}
                 source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2015/09/RudraXp_Mandu05.jpg'}}/>
                 </View>
-              <View style={{backgroundColor:'#F72F81',height:50}}>
+                <View style={styles.destinationItemButton}>
               <Text style={styles.bottomText}>Mandu</Text>
               </View>
           </View>  
           </ScrollView>
-          <Slideshow style={{color:'#fff'}}
-          dataSource={this.state.dataSource}
-          position={this.state.position}
-          onPositionChanged={position => this.setState({ position })} />
           </View>
       );
       }

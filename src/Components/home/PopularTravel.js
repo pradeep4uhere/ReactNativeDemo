@@ -27,65 +27,121 @@ export default class PopularTravel extends Component {
           ],
         };
       }
-render() {
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            marginTop: 1,
-          },
-          scrollView: {
-            backgroundColor: '#FFF',
-            marginHorizontal: 1,
-          },
-          text: {
-            fontSize: 20,
-          },
-
-        welcometext:{
-            width: '90%',
-            flexDirection: 'row',
-            justifyContent: "center", 
-            alignItems: "center",
-            fontSize:18,
-            color:'#FFF',
-            fontWeight: 'bold',
-            marginTop:110
-
-        },
-        text:{
-          fontSize:18,
-          color:'#FFF',
-          fontFamily: 'Cochin',
-          alignItems: "center",
-          justifyContent: "center", 
-
-        },
-      });
-return (
-    <View style={{width: '100%', height:250}}>
-    <Text style={styles.textTitle}>Popular Travel</Text>
-    <View>
-    <Text style={{width:'100%'}}>___________________
-    <Image style={styles.textTitle} source={{uri: "http://192.168.0.181:5000/rudra/images/sep-title.png"}}  style={{
-        width: 50, 
-        height: 10,
-        marginTop:20,
-        }}/>
-    ___________________
-    </Text>
-    </View>
-    <View style={{marginTop:10,color:'#FFF'}}>
-    <Slideshow style={{color:'#fff'}}
-    dataSource={this.state.dataSource}
-    position={this.state.position}
-    onPositionChanged={position => this.setState({ position })} />
-    </View>
-    <View style={{marginTop:10}}>
-      <Button block success onPress={() => this.props.navigation.navigate('EventList')}>
-        <Text>View All</Text>
-      </Button>
-    </View>
-    </View>
-);
-}
-}
+      render() {
+          const styles = StyleSheet.create({
+              container: {
+                  flex: 1,
+                  marginTop: 1,
+                },
+                scrollView: {
+                  backgroundColor: '#FFF',
+                  marginHorizontal: 1,
+                },
+                text: {
+                  fontSize: 20,
+                },
+      
+              welcometext:{
+                  width: '90%',
+                  flexDirection: 'row',
+                  justifyContent: "center", 
+                  alignItems: "center",
+                  fontSize:18,
+                  color:'#FFF',
+                  fontWeight: 'bold',
+                  marginTop:110
+      
+              },
+              text:{
+                fontSize:18,
+                color:'#FFF',
+                fontFamily: 'Cochin',
+                alignItems: "center",
+                justifyContent: "center", 
+      
+              },
+              textTitle:{
+                fontSize:17,
+                color:'#FFF',
+                fontFamily:'Raleway-Bold'
+              },
+              bottomText:{
+                margin:10,
+                fontSize:16,
+                color:'#FFF',
+                alignItems:'center',
+                alignContent:'center'
+              },
+              destinationItem:{
+                backgroundColor:'#ccc', 
+                flexDirection:'column',
+                justifyContent:'space-between',
+                marginRight:1
+              },
+              destinationItemImage:{
+                height:185, width:205
+              },
+              destinationItemButton:{
+                backgroundColor:'#912d2a',
+                height:50, 
+                justifyContent:'center', 
+                alignContent:'center'
+              }
+            });
+      return (
+          <View>
+          <View style={{flexDirection: 'row',justifyContent: 'space-between', marginBottom:1, borderBottomWidth:0.5,marginTop:1, backgroundColor:'#912d2a'}}>
+            <View style={{margin:10}}>
+              <Text style={styles.textTitle}>Popular Travel</Text>
+            </View>
+            <View style={{margin:10}}>
+              <Text style={styles.textTitle}>View All</Text>
+          </View>    
+          </View>
+          <ScrollView horizontal style={{marginBottom:1, marginTop:0}}>
+          <View style={styles.destinationItem}>
+              <View style={styles.destinationItemImage}>
+                <Image
+                style={styles.destinationItemImage}
+                source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2019/02/Ghungroo_Delhi_Rudra_01.jpg'}}/>
+                </View>
+                <View style={styles.destinationItemButton}>
+                <Text style={styles.bottomText}>Keylong</Text>
+              </View>
+          </View> 
+          <View style={styles.destinationItem}>
+              <View style={styles.destinationItemImage}>
+                <Image
+                style={styles.destinationItemImage}
+                source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2016/03/DSC_0480.jpg'}}/>
+                </View>
+                <View style={styles.destinationItemButton}>
+              <Text style={styles.bottomText}>Pahalgam</Text>
+              </View>
+          </View> 
+          <View style={styles.destinationItem}>
+              <View style={styles.destinationItemImage}>
+                <Image
+                style={styles.destinationItemImage}
+                source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2016/04/Tsomoriri_RUDRA_DSC_0903.jpg'}}/>
+                </View>
+                <View style={styles.destinationItemButton}>
+              <Text style={styles.bottomText}>Tso Moriri</Text>
+              </View>
+          </View> 
+          <View style={styles.destinationItem}>
+              <View style={styles.destinationItemImage}>
+                <Image
+                style={styles.destinationItemImage}
+                source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2015/09/RudraXp_Mandu05.jpg'}}/>
+                </View>
+                <View style={styles.destinationItemButton}>
+              <Text style={styles.bottomText}>Mandu</Text>
+              </View>
+          </View>  
+          </ScrollView>
+          </View>
+      );
+      }
+      }
+      

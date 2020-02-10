@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { View,StyleSheet,Image, ImageBackground,SafeAreaView, ScrollView,TouchableHighlight,Platform } from 'react-native';
-import { Container, Header, Content, Button, Text, Left, Body, Right, Icon, Title, Form, Item, Input, Label } from 'native-base';
-import YouTube from 'react-native-youtube'; 
+import { View,StyleSheet,Image, ImageBackground,SafeAreaView, ScrollView,TouchableHighlight,Platform} from 'react-native';
+import { Container, Header, Content, Button, Text, Left, Body, Right, Icon, Title, Form, Item, Input, Label} from 'native-base';
+import WebView from 'react-native-webview';
+import YouTube from 'react-native-youtube';
 export default class PopularViedos extends Component {
     constructor(props) {
         super(props);
@@ -26,8 +27,11 @@ export default class PopularViedos extends Component {
           ],
         };
       }
+
+
 render() {
     const styles = StyleSheet.create({
+       
         container: {
             flex: 1,
             marginTop: 1,
@@ -59,35 +63,99 @@ render() {
           justifyContent: "center", 
 
         },
+        textTitle:{
+          fontSize:16,
+          color:'#FFF',
+          fontFamily:'Raleway-Bold'
+        },
+        bottomText:{
+          margin:10,
+          fontSize:14,
+          color:'#FFF',
+          alignItems:'center',
+          alignContent:'center'
+        },
+        destinationItem:{
+          backgroundColor:'#460061', 
+          flexDirection:'column',
+          justifyContent:'space-between',
+          marginRight:1
+        },
+        destinationItemImage:{
+          height:180, width:204
+        },
+        destinationItemButton:{
+          backgroundColor:'#460061',
+          height:50, 
+          justifyContent:'center', 
+          alignContent:'center'
+        },
+        webView :{
+          height: 220,
+          width : 400
+        }
       });
 return (
-      <View>
-          <Text style={styles.textTitle}>Videos & Reviews</Text>
-          <Text style={{width:'100%'}}>___________________
-          <Image source={{uri: "http://192.168.0.181:5000/rudra/images/sep-title.png"}}  style={{
-              width: 50, 
-              height: 10,
-              marginTop:25,
-              }}/>
-          ___________________
-          </Text>
-          <YouTube
-              videoId="wB44VqgaEP4" // The YouTube video ID
-              play // control playback of video with true/false
-              fullscreen // control whether the video should play in fullscreen or inline
-              loop // control whether the video should loop when ended
-              onReady={e => this.setState({ isReady: true })}
-              onChangeState={e => this.setState({ status: e.state })}
-              onChangeQuality={e => this.setState({ quality: e.quality })}
-              onError={e => this.setState({ error: e.error })}
-              style={{ alignSelf: 'stretch', height: 250 }}
-              />
-              <View style={{marginTop:10}}>
-            <Button block success>
-              <Text>View All</Text>
-            </Button>
-            </View>
+    <View>
+    <View style={{flexDirection: 'row',justifyContent: 'space-between', marginBottom:1, borderBottomWidth:0.5,marginTop:10, backgroundColor:'#460061'}}>
+      <View style={{margin:10}}>
+        <Text style={styles.textTitle}>Popular Review</Text>
       </View>
-  );
+      <View style={{margin:10}}>
+        <Text style={styles.textTitle}>View All</Text>
+    </View>    
+    </View>
+    <ScrollView horizontal style={{marginBottom:1, marginTop:0}}>
+    <View>
+      <WebView
+                style={styles.webView}
+                javaScriptEnabled={true}
+                domStorageEnabled={true}
+                source={{uri: 'https://www.youtube.com/embed/J5yYGZzByz8'}}
+        />
+      </View>
+    <View>
+      <WebView
+                style={styles.webView}
+                javaScriptEnabled={true}
+                domStorageEnabled={true}
+                source={{uri: 'https://www.youtube.com/embed/8nNUhdborjQ'}}
+        />
+      </View>
+    <View>
+      <WebView
+                style={styles.webView}
+                javaScriptEnabled={true}
+                domStorageEnabled={true}
+                source={{uri: 'https://www.youtube.com/embed/VLG-G9fxGxI'}}
+        />
+      </View>
+      <View>
+      <WebView
+                style={styles.webView}
+                javaScriptEnabled={true}
+                domStorageEnabled={true}
+                source={{uri: 'https://www.youtube.com/embed/riEgqYwTDRs'}}
+        />
+      </View>
+      <View>
+      <WebView
+                style={styles.webView}
+                javaScriptEnabled={true}
+                domStorageEnabled={true}
+                source={{uri: 'https://www.youtube.com/embed/vpZY1g79_eY'}}
+        />
+      </View>
+      <View>
+      <WebView
+                style={styles.webView}
+                javaScriptEnabled={true}
+                domStorageEnabled={true}
+                source={{uri: 'https://www.youtube.com/embed/wB44VqgaEP4'}}
+        />
+      </View>
+    </ScrollView>
+    </View>
+);
 }
 }

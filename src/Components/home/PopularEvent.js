@@ -65,13 +65,7 @@ render() {
           color:'#FFF',
           fontFamily:'Raleway-Bold'
         },
-        bottomText:{
-          margin:10,
-          fontSize:16,
-          color:'#FFF',
-          alignItems:'center',
-          alignContent:'center'
-        },
+      
         destinationItem:{
           backgroundColor:'#ccc', 
           flexDirection:'column',
@@ -79,19 +73,25 @@ render() {
           marginRight:1
         },
         destinationItemImage:{
-          height:200, width:250
+          height:180, width:204
+        },
+        ItemButton:{
+          justifyContent:'center',
+          alignItems:'center',
+          backgroundColor:'#ff6655',
+          height:50
+          
+          
+        },
+        ItemButtonText:{
+          fontSize:14,
+          color:'#FFF',
+          flexWrap: 'wrap',
         }
       });
 return (
     <View>
-    <View style={{flexDirection: 'row',justifyContent: 'space-between', marginBottom:1, borderBottomWidth:0.5,marginTop:10, backgroundColor:'#0086b3'}}>
-      <View style={{margin:10}}>
-        <Text style={styles.textTitle}>Popular Events</Text>
-      </View>
-      <View style={{margin:10}}>
-        <Text style={styles.textTitle}>View All</Text>
-    </View>    
-    </View>
+   
     <ScrollView horizontal style={{marginBottom:1, marginTop:0}}>
     <View style={styles.destinationItem}>
         <View style={styles.destinationItemImage}>
@@ -99,12 +99,12 @@ return (
           style={styles.destinationItemImage}
           source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2016/04/mumbai_DSC_0545_rudra.jpg'}}/>
           </View>
-        <View style={{backgroundColor:'#F72F81',height:50, justifyContent:'space-between',flexDirection: 'row'}}>
-        <View >
-          <Text style={{margin:10, color:'#FFF'}}>Mahak – Jaipur (Morning)</Text>
+        <View>
+        <View style={styles.ItemButton} >
+          <Text style={styles.ItemButtonText}>Mahak – Jaipur (Morning)</Text>
           </View>
-         
         </View>
+        
     </View> 
     <View style={styles.destinationItem}>
         <View style={styles.destinationItemImage}>
@@ -112,11 +112,10 @@ return (
           style={styles.destinationItemImage}
           source={{uri: 'https://www.holidify.com/images/cmsuploads/compressed/Taj_mahal_in_independence_day_20171024202456.jpg'}}/>
           </View>
-        <View style={{backgroundColor:'#F72F81',height:50, justifyContent:'space-between',flexDirection: 'row'}}>
-        <View >
-          <Text style={{margin:10, color:'#FFF'}}>Sham e Taj</Text>
+        <View>
+        <View style={styles.ItemButton} >
+          <Text style={styles.ItemButtonText}>Sham e Taj</Text>
           </View>
-         
         </View>
     </View> 
     <View style={styles.destinationItem}>
@@ -125,12 +124,13 @@ return (
           style={styles.destinationItemImage}
           source={{uri: 'https://cdn1.goibibo.com/t_tg_fs/new-delhi-india-gate-147623366844-orijgp.jpg'}}/>
           </View>
-        <View style={{backgroundColor:'#F72F81',height:50, justifyContent:'space-between',flexDirection: 'row'}}>
-        <View >
-          <Text style={{margin:10, color:'#FFF'}}>Djinns and Mystics</Text>
+        
+          <View>
+        <View style={styles.ItemButton} >
+          <Text style={styles.ItemButtonText}>Djinns and Mystics</Text>
           </View>
-         
         </View>
+        
     </View> 
     <View style={styles.destinationItem}>
         <View style={styles.destinationItemImage}>
@@ -138,12 +138,11 @@ return (
           style={styles.destinationItemImage}
           source={{uri: 'https://www.rudraxp.com/wp-content/uploads/2015/11/Sham-e-Banaras-Rudra_01.jpg'}}/>
           </View>
-        <View style={{backgroundColor:'#F72F81',height:50, justifyContent:'space-between',flexDirection: 'row'}}>
-        <View >
-          <Text style={{margin:10, color:'#FFF'}}>Sham e Banaras</Text>
+          <View>
+          <View style={styles.ItemButton} >
+            <Text style={styles.ItemButtonText}>Sham e Banaras</Text>
+            </View>
           </View>
-         
-        </View>
     </View> 
 
 
@@ -155,20 +154,20 @@ return (
           style={styles.destinationItemImage}
           source={{uri: 'https://i2.wp.com/www.manjulikapramod.com/wp-content/uploads/2017/03/GHUNGROO-%E2%80%93-DANCE-MUSICAL-DINNER-THEATRE.jpg?fit=800%2C534'}}/>
           </View>
-        <View style={{backgroundColor:'#F72F81',height:50}}>
-        <Text style={styles.bottomText}>Ghungroo Country’s only Dinner</Text>
-        </View>
-    </View> 
- 
+
+          <View style={styles.ItemButton} >
+            <Text style={styles.ItemButtonText}>Ghungroo Country’s Dinner</Text>
+          </View>
+    </View>
     <View style={styles.destinationItem}>
         <View style={styles.destinationItemImage}>
           <Image
           style={styles.destinationItemImage}
           source={{uri: 'https://storage.googleapis.com/ehimages/2018/6/4/img_399874620e07babb416b4f594d18cf89_1528117764888_processed_original.jpg'}}/>
           </View>
-        <View style={{backgroundColor:'#F72F81',height:50}}>
-        <Text style={styles.bottomText}>Sham e Mumbai</Text>
-        </View>
+          <View style={styles.ItemButton} >
+            <Text style={styles.ItemButtonText}>Sham e Mumbai</Text>
+          </View>
     </View>  
     </ScrollView>
     </View>
